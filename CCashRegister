@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main() {
+    cout <<"Welcome to Nadav's change computing program";
+    float cost;
+    cout << "\n What is your total?(please enter value less than 1)\n";
+    cin >>cost;
+    float payment;
+    payment = 1;
+    cout << "You are paying with,\n" <<payment << " dollar";
+    float change = payment - cost;
+    cout << "\nYour change will be,\n" << change*100 << " cents";
+    int quarters = change/.25;
+    int dimes = ((change - (quarters*.25))/.1);
+    int nickels = ((change - (quarters*.25) - (dimes*.10))/.05);
+    int pennies = (change - (quarters*.25) - (dimes*.10) - (nickels*.05))*101;
+    cout << "\nYour change today will be given in,\n" << quarters << " quarters\n";
+    cout << dimes<< " dimes\n";
+    cout << nickels << " nickels\n";
+    cout << pennies << " pennies\n";
+    cout << "Thank you for using Nadav's change computing program";
+}
